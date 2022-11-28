@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Edit User</title>
+</head>
+<body>
+    <form action="/update_user" method="post">
+        <h1 class="text-center">Edit User</h1>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="first_name"><strong>First Name</strong></label>
+                <input type="text" name="first_name" class="form-control" value="{{user.first_name}}">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="last_name"><strong>Last Name</strong></label>
+                <input type="text" name="last_name"class="form-control" value="{{user.last_name}}">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email"><strong>Email</strong></label>
+                <input type="text" name="email" class="form-control" value="{{user.email}}">
+            </div>
+            <input type="submit" value="Update" class="btn btn-dark">
+            <a href="/read" value="Go back" class="btn btn-dark">Go back</a>
+            <input type="hidden" name="id" value="{{user.id}}">
+        </div>
+    </form>
+</body>
+</html>
